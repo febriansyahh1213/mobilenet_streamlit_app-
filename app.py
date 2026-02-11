@@ -8,7 +8,7 @@ st.set_page_config(page_title="Image Classification")
 
 @st.cache_resource
 def load_model():
-    return tf.keras.models.load_model("mobilenetv2_model.h5", compile=False)
+    return tf.keras.models.load_model("model_emosi.h5", compile=False)
 
 model = load_model()
 
@@ -33,3 +33,4 @@ if uploaded_file:
 
     st.write(f"🧠 Class index: **{class_idx}**")
     st.write(f"📊 Confidence: **{confidence:.2f}%**")
+
